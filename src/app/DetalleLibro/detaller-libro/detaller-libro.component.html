@@ -1,0 +1,24 @@
+<div class="container">
+
+    <div class="row">
+        <div class="col-12">
+            <h2 class="text-center">Detalle de libro</h2>
+        </div>
+    </div>
+    <br>
+
+    <div class="row">
+        <div class="col-12">
+            <div class="card">
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item"><b>Nombre:</b> &nbsp;&nbsp;<span>{{datosLibro.titulo}}</span></li>
+                    <li class="list-group-item"><b>Nacionalidad:</b> &nbsp;&nbsp;<span>{{datosLibro.anioPublicacion}}</span></li>
+                    <li class="list-group-item"><b>Fecha de nacimiento:</b> &nbsp;&nbsp;<span>{{datosLibro.genero}}</span></li>
+                    <li class="list-group-item"><b>Genero:</b> &nbsp;&nbsp;<span>{{datosLibro.status == 0 ? 'Disponible': 'No disponible'}}</span></li>
+                    <li class="list-group-item"><b>AutorId:</b> &nbsp;&nbsp;<span>{{datosLibro.autores.nombre}}</span></li>
+                </ul>
+            </div>
+            <br>
+        </div>
+    </div>
+</div>

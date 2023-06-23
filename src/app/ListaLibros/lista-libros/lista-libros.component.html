@@ -1,0 +1,32 @@
+<div class="container">
+    <h1>Lista de Libros</h1>
+    <td scope="row"><button class="btn btn-outline-success"
+        (click)="altaRegistro()">Agregar</button></td>
+    <table class="table table-bordered" width="100%" cellSpacing>
+        <thead>
+            <th>Id</th>
+            <th>Titulo</th>
+            <th>Año de publicacion</th>
+            <th>Genero</th>
+            <th>Estatus</th>
+            <th>Autor</th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+        </thead>
+        <tbody>
+            <tr *ngFor=" let libros of resultados">
+                <td scope="row">{{libros.id}}</td>
+                <td scope="row">{{libros.titulo}}</td>
+                <td scope="row">{{libros.anioPublicacion}}</td>
+                <td scope="row">{{libros.genero}}</td>
+                <td scope="row">{{libros.status == 0 ? 'Disponible':'No disponible'}}</td>
+                <td scope="row">{{libros.autores.nombre}}</td>
+                <td scope="row"><button class="btn btn-outline-success"[routerLink]="['/DetallerLibros', libros.id]">Detalle</button></td>
+                <td scope="row"><button class="btn btn-primary"[routerLink]="['/EditarLibros', libros.id]">Editar</button></td>
+                <td scope="row"><button class="btn btn-danger"(click)="eliminar(libros.id)">Eliminar</button></td>
+            </tr>
+        </tbody>
+    </table>
+</div>

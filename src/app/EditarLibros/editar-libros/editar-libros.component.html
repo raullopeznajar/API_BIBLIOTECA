@@ -1,0 +1,42 @@
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <h2>Edicion de libros</h2>
+        </div>
+    </div>
+    <br>
+
+    <div class="row">
+        <div class="col-12">
+            <div class="form-group">
+                <label for="">Titulo</label>
+                <input type="text" class="form-control" #caja1 [value]="datosLibro.titulo">
+            </div>
+            <br>
+            <div class="form-group">
+                <label for="">Año publicacion</label>
+                <input type="string" class="form-control" #caja2 [value]="datosLibro.anioPublicacion">
+            </div>
+            <br> 
+            <div class="form-group">
+                <label for="">Genero</label>
+                <input type="text" class="form-control" #caja3 [value]="datosLibro.genero">
+            </div>
+            <br>           
+            <div class="form-group">
+                <label for="">Status</label>
+                <input type="int" class="form-control" #caja4 [value]="datosLibro.status">
+            </div>
+            <br> 
+            <div class="form-group">
+                <label for="">AutorId</label>
+                <input type="int" class="form-control" #caja5 [value]="datosLibro.autorId">
+            </div>
+            <br> 
+            <div class="form-group">
+                <button (click)="GuardarDatos()" class="btn btn-success">Guardar</button>
+            </div>
+            <br> 
+        </div>
+    </div>
+</div>

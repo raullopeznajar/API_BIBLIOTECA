@@ -1,0 +1,38 @@
+<div class="container">
+    <h1>Lista de Autores</h1>
+    <td scope="row"><button class="btn btn-outline-success"
+        (click)="altaRegistro()">Agregar</button></td>
+    <table class="table table-bordered" width="100%" cellSpacing>
+        <thead>
+            <th>Id</th>
+            <th>Nombre</th>
+            <th>Nacionalidad</th>
+            <th>Fecha de nacimiento</th>
+            <th>Genero</th>
+            <th></th>
+            <th></th>
+            <th></th>
+        </thead>
+        <tbody>
+            <tr *ngFor=" let autores of resultados">
+                <td scope="row">{{autores.id}}</td>
+                <td scope="row">{{autores.nombre}}</td>
+                <td scope="row">{{autores.nacionalidad}}</td>
+                <td scope="row">{{autores.fechaNacimiento}}</td>
+                <td scope="row">{{autores.genero}}</td>
+                <!-- <td scope="row"><button class="btn btn-outline-success" [routerLink]="['/DetalleAerolineas', aerolinea.id]">Detalle</button></td>
+                    <td scope="row"><button class="btn btn-primary" [routerLink]="['/EditarAerolineas', aerolinea.id]">Editar</button></td>
+                    <td scope="row"><button class="btn btn-danger" (click)="eliminar(aerolinea.id)">Eliminar</button></td>
+                    <td scope="row"><button class="btn btn-warning" [routerLink]="['/Aerolinea',aerolinea.id,'aviones']">Ver aviones</button></td> -->
+
+
+                <td scope="row"><button class="btn btn-outline-success"
+                        [routerLink]="['/DetallerAutores', autores.id]">Detalle</button></td>
+                <td scope="row"><button class="btn btn-primary"
+                        [routerLink]="['/EditarAutores', autores.id]">Editar</button></td>
+                <td scope="row"><button class="btn btn-danger"
+                        (click)="eliminar(autores.id)">Eliminar</button></td>
+            </tr>
+        </tbody>
+    </table>
+</div>

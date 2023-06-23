@@ -1,0 +1,37 @@
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <h2>Edicion de autores</h2>
+        </div>
+    </div>
+    <br>
+
+    <div class="row">
+        <div class="col-12">
+            <div class="form-group">
+                <label for="">Nombre</label>
+                <input type="text" class="form-control" #caja1 [value]="datosAutor.nombre">
+            </div>
+            <br>
+            <div class="form-group">
+                <label for="">Nacionalidad</label>
+                <input type="text" class="form-control" #caja2 [value]="datosAutor.nacionalidad">
+            </div>
+            <br> 
+            <div class="form-group">
+                <label for="">Fecha de nacimiento</label>
+                <input type="text" class="form-control" #caja3 [value]="datosAutor.fechaNacimiento">
+            </div>
+            <br>           
+            <div class="form-group">
+                <label for="">Genero</label>
+                <input type="text" class="form-control" #caja4 [value]="datosAutor.genero">
+            </div>
+            <br> 
+            <div class="form-group">
+                <button (click)="GuardarDatos()" class="btn btn-success">Guardar</button>
+            </div>
+            <br> 
+        </div>
+    </div>
+</div>
